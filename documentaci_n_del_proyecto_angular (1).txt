@@ -1,0 +1,96 @@
+================================================================================
+PROYECTO: LENTOS Y CURIOSOS A POCO GAS - LANDING PAGE Y REGISTRO
+Módulo: Ampliación de Desarrollo de Interfaces (2º DAM)
+Resultado de Aprendizaje: RA1 - Creación de componentes visuales
+================================================================================
+
+1. COMANDOS UTILIZADOS EN EL DESARROLLO
+A continuación se detallan los comandos ejecutados en la terminal (PowerShell) 
+para la configuración del entorno, creación del workspace, ejecución y 
+compilación del proyecto en Angular:
+
+- `node -v`
+  Comprueba la versión instalada de Node.js en el sistema.
+
+- `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+  Habilita la ejecución de scripts locales en Windows PowerShell para permitir 
+  el uso del comando `ng` sin restricciones de seguridad.
+
+- `npm install -g @angular/cli`
+  Instala de forma global la interfaz de línea de comandos oficial de Angular 
+  (Angular CLI).
+
+- `ng new prueba`
+  Genera la estructura inicial del proyecto Angular, configurando CSS como 
+  sistema de hojas de estilo y desactivando el renderizado en servidor (SSR).
+
+- `cd prueba`
+  Accede al directorio raíz del workspace generado para poder ejecutar los 
+  comandos propios del proyecto.
+
+- `ng serve`
+  Levanta el servidor local de desarrollo en `http://localhost:4200/` con 
+  recarga automática (Hot Reload) ante cambios en el código.
+
+- `ng build`
+  Compila la aplicación y genera los archivos optimizados listos para su 
+  empaquetado y distribución final.
+
+
+2. PREPARACIÓN DEL ENTORNO DE DESARROLLO
+Para poder desarrollar y compilar el proyecto en Angular, se realizaron las 
+siguientes configuraciones previas en el equipo (Windows):
+
+- Verificación de Node.js y npm: Se comprobó mediante terminal la correcta 
+  instalación del entorno de ejecución necesario para gestionar las dependencias 
+  del proyecto.
+- Configuración de políticas de ejecución: Al trabajar en Windows PowerShell, 
+  fue necesario modificar los permisos de ejecución para el usuario actual y 
+  evitar bloqueos al invocar los scripts de npm.
+- Instalación de Angular CLI: Se dejó disponible la herramienta globalmente 
+  para agilizar la creación y gestión del espacio de trabajo.
+
+
+3. CREACIÓN Y ESTRUCTURA DEL PROYECTO
+El proyecto se generó utilizando Angular CLI seleccionando CSS estándar como 
+hoja de estilos y deshabilitando el renderizado en servidor (SSR) para mantener 
+una arquitectura SPA (Single Page Application) ligera y directa.
+
+La estructura principal de directorios utilizada es la siguiente:
+- `src/app/`: Contiene la lógica principal, las plantillas HTML (`app.html`), 
+  los estilos del componente (`app.css`) y la configuración de rutas.
+- `src/assets/` (o carpeta pública): Almacena los recursos estáticos y 
+  capturas reales del videojuego (`menu-bg.jpg` y `gameplay.png`).
+- `angular.json` y `package.json`: Ficheros de configuración del workspace y 
+  gestión de paquetes/dependencias.
+
+
+4. DESARROLLO DE LA INTERFAZ Y DISEÑO (HTML Y CSS)
+El diseño de la interfaz se ha estructurado en bloques semánticos bien 
+diferenciados para mejorar la experiencia de usuario (UX):
+
+- Cabecera fija (Header): Implementada con Flexbox (`display: flex`) y 
+  posicionamiento fijo (`position: fixed`) para permitir la navegación rápida 
+  mediante anclas internas hacia las distintas secciones de la página.
+- Sección Hero: Banner principal a pantalla completa (`100vh`) que utiliza una 
+  de las capturas del menú del juego como fondo con un degradado oscuro para 
+  garantizar la legibilidad del título y los botones de llamada a la acción.
+- Galería de Capturas: Maquetada mediante CSS Grid (`grid-template-columns`) 
+  para lograr un diseño adaptable (responsive) que muestra las tarjetas con 
+  imágenes del gameplay y descripciones.
+- Formulario de Registro: Contenedor centrado con inputs validados mediante 
+  atributos HTML5 (`required`, `type="email"`, `type="password"`), estilizado 
+  con transiciones suaves en el foco (`:focus`) y botones interactivos.
+- Paleta de colores: Se ha mantenido una estética coherente basada en tonos 
+  oscuros (`#1a1a2e`, `#0f3460`) combinados con un color de acento vibrante 
+  (`#e94560`) para destacar los elementos interactivos.
+
+
+5. PRUEBAS EN LOCAL Y EMPAQUETADO
+- Ejecución en desarrollo: Durante toda la fase de codificación se utilizó el 
+  servidor local de Angular en el puerto `http://localhost:4200/`, aprovechando 
+  la recarga en caliente (Hot Reload) para verificar en tiempo real los cambios 
+  aplicados en las vistas y hojas de estilo.
+- Compilación final: Para validar que el proyecto no contiene errores de 
+  sintaxis ni de tipado y dejarlo listo para distribución, se emplea la 
+  compilación de producción, generando los archivos optimizados.
